@@ -30,7 +30,7 @@ die();  // Stop execution of the PHP page here.  Everything below this point sho
 function CleanData($inputData)
 {
     $cleanData = array();
-    foreach($_POST as $key => $value)
+    foreach($inputData as $key => $value)
         $cleanData[trim(strip_tags($key))] = trim(strip_tags($value));
 
     return $cleanData;
