@@ -15,13 +15,12 @@ function mysqlConnect()
     if ($mysql_connection->connect_error)
     {
         $mysql_response = "Connect Error (" . $mysql_connection->connect_errno . ") " . $mysql_connection->connect_error;
-        //echo json_encode($mysql_response);
+     
         error_log(json_encode($mysql_response));
         die();
     }
     else
     {
-        //echo "Connection successfully created";
         error_log("Connection successfully created");
     }
 }
